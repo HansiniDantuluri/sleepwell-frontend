@@ -9,8 +9,7 @@
  *   const schedule = await api.schedule.generate({ date: "2024-10-15", free_text_tasks: "gym 1hr, report by 5pm" });
  */
 
-const BASE_URL = "http://localhost:8000/api";
-
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
 // ─── Auth token storage ──────────────────────────────────────────────────────
 
 let _token: string | null = null;
